@@ -24,13 +24,13 @@ def sms_sender(sms_text):
     load_dotenv()
     account_sid = os.getenv('sid_twilio')
     auth_token = os.getenv('token_twilio')
-    number_from = os.getenv('number_from')
-    number_to = os.getenv('number_to')
+    NUMBER_FROM = os.getenv('NUMBER_FROM')
+    NUMBER_TO = os.getenv('NUMBER_TO')
     client = Client(account_sid, auth_token)
     message = client.messages.create(
                               body=sms_text,
-                              from_=number_from,
-                              to=number_to
+                              from_=NUMBER_FROM,
+                              to=NUMBER_TO
                           )
     return message.sid  # Верните sid отправленного сообщения из Twilio 642 153 
 
