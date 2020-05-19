@@ -19,5 +19,5 @@ __pycache__/
 static/
 posts/static/
 media/
-
+.env
 db.sqlite3
